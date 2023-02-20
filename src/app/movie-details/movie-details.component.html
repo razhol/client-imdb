@@ -1,0 +1,15 @@
+
+
+<div class = "movies-div">
+    <ngx-spinner type="ball-beat"></ngx-spinner>
+    <div>Title: {{movie?.title}}</div>
+    <div>Plot: {{movie?.plot}}</div>
+    <div>Director: {{movie?.director}}</div> 
+    <div>ImdbRating: {{movie?.imdbRating}}</div> 
+    <div>Language: {{movie?.language}}</div> 
+    <div>Runtime: {{movie?.runtime}}</div> 
+    <div>Country: {{movie?.country}}</div> 
+    <div>Type: {{movie?.type}}</div> 
+    <div><img class="img-size" [src]="movie?.poster" alt="Place image title"></div>
+    <div><a href="/" class="next" >&laquo; Previous</a></div>
+</div>
