@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Movie } from '../_models/movie';
 import {catchError } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +41,6 @@ export class RestService {
   }
 
   private getServerErrorMessage(error: HttpErrorResponse): string {
-    debugger;
     switch (error.status) {
         case 404: {
             return `Not Found: ${error.message}`;
