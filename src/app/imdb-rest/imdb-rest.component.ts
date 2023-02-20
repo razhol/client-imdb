@@ -63,4 +63,19 @@ export class ImdbRestComponent implements OnInit {
     this.router.navigateByUrl(`/${id}` );
   }
 
+  paging(){
+    if(this.NextPage){
+      this.page ++;
+    }
+    else {
+      this.page --;
+    }
+    if(this.page > 0) {
+      this.fromPaging = true;
+      this.searchMovie();
+    }
+    else {
+      this.page ++;
+    }
+  }
 }
