@@ -30,7 +30,6 @@ export class RestService {
     return this.http.get<Movie[]>(this.baseUrl + `Movies/getById?Id=${id}`).pipe(
       catchError(error => {
         let errorMsg: string;
-        debugger;
         if (error.error instanceof ErrorEvent) {
             errorMsg = `Error: ${error.error.message}`;
         } else {

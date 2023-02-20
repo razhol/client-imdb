@@ -15,5 +15,17 @@ export class MovieDetailsComponent {
   public movie:Movie | undefined;
   constructor(private route: ActivatedRoute,private router:Router,private restService: RestService,private spinner: NgxSpinnerService) {}
 
- ngOnInit() {    }
+ ngOnInit() {    
+  this.spinner.hide();
+  this.id = this.route.snapshot.paramMap.get('id');
+  this.spinner.show();
+  this.restService.SearchDataById(this.id).subscribe((result:any) => {
+    this.movie = result;
+    this.spinner.hide();
+  },
+  error => {
+    this.spinner.hide();
+    this.router.navigateByUrl('/');
+  })
+ }
 }
