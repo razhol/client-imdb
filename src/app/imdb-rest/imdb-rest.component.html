@@ -3,3 +3,24 @@
      <input class="form-control" type="text" [(ngModel)]="MovieName" placeholder="Enter movie to search">
      <a href="#" class="next search-button" (click) = "search()"> Search</a>
 </nav>
+<ngx-spinner type="ball-beat"></ngx-spinner>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Img</th>
+      <th>Imdb Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+         <tr *ngFor="let movie of movies">
+             <td><a routerLink="/{{movie.imdbID}}" (click) ="saveInSessinStorage()"> {{movie.title}}</a></td>
+             <td>{{movie.plot}}</td>
+             <td><img class="img-size" [src]="movie.poster" alt="Place image title"></td>
+             <td>{{movie.imdbRating}}</td>
+         </tr>
+  </tbody>
+</table>
+<div class = "div-buttons">
+</div>

@@ -36,6 +36,11 @@ export class ImdbRestComponent implements OnInit {
     this.searchMovie();
   }
 
+  saveInSessinStorage(){
+    sessionStorage.setItem('MovieName', JSON.stringify(this.movieNameSuccess));
+    sessionStorage.setItem('Page', JSON.stringify(this.page));
+  }
+
   searchMovie() {
     this.spinner.show();
     this.restService.SearchDataByMovieName(this.MovieName,this.page).subscribe(
@@ -54,6 +59,8 @@ export class ImdbRestComponent implements OnInit {
     )
   }
 
+  navigate(id:string) {
+    this.router.navigateByUrl(`/${id}` );
+  }
 
-  
 }
