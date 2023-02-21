@@ -5,12 +5,12 @@ import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
-  selector: 'app-imdb-rest',
-  templateUrl: './imdb-rest.component.html',
-  styleUrls: ['./imdb-rest.component.scss']
+  selector: 'app-imdb-movie-search',
+  templateUrl: './imdb-movie-search.component.html',
+  styleUrls: ['./imdb-movie-search.component.scss']
 })
 
-export class ImdbRestComponent implements OnInit {
+export class ImdbMovieSearchComponent implements OnInit {
   movies: Movie[] = [];
   MovieName: string = "";
   movieNameSuccess:string = "";

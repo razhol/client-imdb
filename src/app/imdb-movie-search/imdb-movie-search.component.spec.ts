@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImdbRestComponent } from './imdb-rest.component';
+import { ImdbMovieSearchComponent } from './imdb-movie-search.component';
 
 describe('ImdbRestComponent', () => {
-  let component: ImdbRestComponent;
-  let fixture: ComponentFixture<ImdbRestComponent>;
+  let component: ImdbMovieSearchComponent;
+  let fixture: ComponentFixture<ImdbMovieSearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImdbRestComponent ]
+      declarations: [ ImdbMovieSearchComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ImdbRestComponent);
+    fixture = TestBed.createComponent(ImdbMovieSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
