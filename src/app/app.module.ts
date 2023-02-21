@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ImdbTableComponent } from './imdb-rest/imdb-table/imdb-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImdbRestComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    ImdbTableComponent
   ],
   imports: [
     BrowserModule,

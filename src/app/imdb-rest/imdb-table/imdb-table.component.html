@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Img</th>
+        <th>Imdb Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+           <tr *ngFor="let movie of movies">
+               <td><a routerLink="/{{movie.imdbID}}" (click) ="saveSessionStorage.emit()"> {{movie.title}}</a></td>
+               <td>{{movie.plot}}</td>
+               <td><img class="img-size" [src]="movie.poster" alt="Place image title"></td>
+               <td>{{movie.imdbRating}}</td>
+           </tr>
+    </tbody>
+  </table>
