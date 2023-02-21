@@ -31,7 +31,7 @@ export class ImdbRestComponent implements OnInit {
     this.searchMovie();
   }
 
-  search() {
+  searchByInputField() {
     this.page = 1;
     this.fromPaging = false;
     this.searchMovie();
@@ -65,12 +65,7 @@ export class ImdbRestComponent implements OnInit {
   }
 
   paging(){
-    if(this.NextPage){
-      this.page ++;
-    }
-    else {
-      this.page --;
-    }
+    this.NextPage ? this.page ++ : this.page --;
     if(this.page > 0) {
       this.fromPaging = true;
       this.searchMovie();
