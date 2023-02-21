@@ -33,6 +33,7 @@ export class ImdbRestComponent implements OnInit {
 
   search() {
     this.page = 1;
+    this.fromPaging = false;
     this.searchMovie();
   }
 
